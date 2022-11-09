@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 export const Register = (props) => {
     const [email, setEmail] = useState('');
+     const [phone, setphone] = useState('');
     const [pass, setPass] = useState('');
     const [adress, setAdress] = useState('');
     const [licence, setLicence] = useState('');
@@ -20,10 +21,12 @@ export const Register = (props) => {
             <input value={name} name="name" id="name" placeholder="full Name" />
             <label htmlFor="email">email</label>
             <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
+            <label htmlFor="phone">Phone number</label>
+            <input value={phone} onChange={(e) =>setphone(e.target.value)}type="phone" placeholder="Phone Number" id="phone" name="phone"/>
             <label htmlFor="adress">adress</label>
-            <input value={adress} onChange={(e) =>setAdress(e.target.value)}type="adress" placeholder="adress" id="adress" name="adress"/>
+            <input value={adress} onChange={(e) =>setAdress(e.target.value)}type="adress" placeholder="Your adress" id="adress" name="adress"/>
              <label htmlFor="licence">Driving licence</label>
-            <input value={licence} onChange={(e) => setLicence(e.target.value)} type="licence" placeholder="licence" id="licence" name="licence" />
+            <input value={licence} onChange={(e) => setLicence(e.target.value)} type="licence" placeholder="Driving licence" id="licence" name="licence" />
             <label htmlFor="password">password</label>
             <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
             <button type="submit">Log In</button>
